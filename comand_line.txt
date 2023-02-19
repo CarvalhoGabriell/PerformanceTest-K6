@@ -1,4 +1,0 @@
-k6 run .\config_metrics.js --out json=.\logs\test.json
-
--- Precisa estar configurado o token do k6-cloud
-k6 run .\config_metrics.js --out json=.\logs\test.json --out cloud
