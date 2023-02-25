@@ -31,7 +31,12 @@ Um simples projeto passando por exemplos básicos e avançados de Testes de Perf
 
 ```bash
   
-k6 run .\config_metrics.js --out json=.\logs\test.json --out cloud
+ k6 run .\config_metrics.js --out json=.\logs\test.json --out cloud
+```
+* Para debugar seu código basta adicionar as tags `--http-debug` ou `--http-debug=full` em tempo de execução e no seu terminal de saída haverá algumas informação mais detalhadas
+```bash
+  
+ k6 run .\MaoNaMassa\exec5_LoadTest_LoginAuth.js --http-debug=full
 ```
 
 ## Autores
