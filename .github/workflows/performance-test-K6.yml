@@ -11,4 +11,4 @@ jobs:
       - name: step 2 - Running test K6
         uses: grafana/k6-action@v0.2.0
         with:
-          filename: Project_K6/MaoNaMassa/exec1_smokeTest.js
+          filename: Projetct_K6/MaoNaMassa/exec1_smokeTest.js
