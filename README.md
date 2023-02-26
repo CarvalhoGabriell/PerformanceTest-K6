@@ -18,21 +18,20 @@ Um simples projeto passando por exemplos básicos e avançados de Testes de Perf
 </div>
 
 ## Tipos de Testes executados no Projeto
-    - Load Tests
+    - Testes de Carga
     - Smoke Tests
     - Métricas
+    - Checks
+    - Testes de Desempenho
 
 ## Linha de comando para execução
+
+* Comando para executar o script localmente e gerando um arquivo de log .json
 
 ```bash
   k6 run .\config_metrics.js --out json=.\logs\test.json
 ```
-* Para executar esse comando com sucesso é necessário realizar as configurações do k6-cloud e configurar o seu Token.
 
-```bash
-  
- k6 run .\config_metrics.js --out json=.\logs\test.json --out cloud
-```
 * Para debugar seu código basta adicionar as tags `--http-debug` ou `--http-debug=full` em tempo de execução e no seu terminal de saída haverá algumas informação mais detalhadas
 ```bash
   
@@ -42,4 +41,3 @@ Um simples projeto passando por exemplos básicos e avançados de Testes de Perf
 ## Autores
 
 - [@CarvalhoGabriell](https://github.com/CarvalhoGabriell)
-
