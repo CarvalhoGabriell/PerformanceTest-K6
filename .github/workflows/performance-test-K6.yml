@@ -1,5 +1,7 @@
 name: Pipeline Tests K6 
 on: [push]
+permissions:
+  contents: write
 jobs:
   build: 
     name: K6 Performance
