@@ -1,14 +1,24 @@
-name: K6 Performance
+name: Pipeline Tests K6 
+run-name: ${{ github.actor }}
 on: [push]
 jobs:
   build: 
     name: K6 Performance
     runs-on: ubuntu-latest
     steps: 
-      - name: step 1 - Checkout repositorie
+      - name: step 1 - Checkout repositore
         uses: actions/checkout@v3
 
       - name: step 2 - Running test K6
         uses: grafana/k6-action@v0.2.0
         with:
           filename: Projetct_K6/MaoNaMassa/exec1_smokeTest.js
+
+      - run: ls
+
+      - name: step 3- Upload Artifacts
+        uses: actions/checkout@v3
+          with:
+            name: Relaório Performance tests
+            path: Projetct_K6/logs/
+            if-no-files-found: error # 'warn' or 'ignore' are also available, defaults to `warn`
