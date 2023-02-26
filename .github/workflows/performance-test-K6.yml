@@ -18,7 +18,7 @@ jobs:
 
       - name: step 3- Upload Artifacts
         uses: actions/checkout@v3
-          with:
-            name: Relaório Performance tests
-            path: Projetct_K6/logs/
-            if-no-files-found: error # 'warn' or 'ignore' are also available, defaults to `warn`
+        with:
+          name: Relaório Performance tests
+          path: Projetct_K6/logs/
+          if-no-files-found: error # 'warn' or 'ignore' are also available, defaults to `warn`
