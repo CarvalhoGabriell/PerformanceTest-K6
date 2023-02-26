@@ -14,8 +14,6 @@ jobs:
         uses: grafana/k6-action@v0.2.0
         with:
           filename: Projetct_K6/MaoNaMassa/exec1_smokeTest.js
-          filename: Projetct_K6/MaoNaMassa/exec2_LoadTest_GetUsers.js
-          filename: Projetct_K6/MaoNaMassa/exec3_LoadTest_RegisterUser.js
 
       ## é possivel realizar comandos linux nesse step
       - run: ls
