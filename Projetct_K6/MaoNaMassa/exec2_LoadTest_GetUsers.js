@@ -1,5 +1,6 @@
 import http from "k6/http";
 import { check, sleep } from "k6";
+import { htmlReport } from "https://raw.githubusercontent.com/benc-uk/k6-reporter/main/dist/bundle.js";
 
 
 // fase de configuração
@@ -37,3 +38,10 @@ export default function() {
     });
     sleep(1)
 }
+
+// no metodo de retorno informar o caminho que o report deve ser armazenado e o nome do arquivo terminado em .html
+export function handleSummary(data) {
+    return {
+      "../logs/index.html": htmlReport(data),
+    };
+  }

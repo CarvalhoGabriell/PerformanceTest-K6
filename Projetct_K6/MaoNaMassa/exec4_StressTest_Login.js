@@ -2,6 +2,8 @@ import http from "k6/http";
 import { check, sleep } from "k6";
 import { SharedArray } from "k6/data";
 import papaparse from 'https://jslib.k6.io/papaparse/5.1.1/index.js'
+import { htmlReport } from "https://raw.githubusercontent.com/benc-uk/k6-reporter/main/dist/bundle.js";
+
 
 export const options = {
     stages :[
@@ -55,3 +57,11 @@ export default function() {
 
 }
 
+
+
+// no metodo de retorno informar o caminho que o report deve ser armazenado e o nome do arquivo terminado em .html
+export function handleSummary(data) {
+    return {
+      "../logs/index.html": htmlReport(data),
+    };
+  }
