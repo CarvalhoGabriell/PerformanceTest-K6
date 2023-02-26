@@ -16,13 +16,13 @@ jobs:
           filename: Projetct_K6/MaoNaMassa/exec1_smokeTest.js
 
       ## é possivel realizar comandos linux nesse step
-      - run: ls & mv index.html logs
+      - run: ls & cd Projetct_K6 & mkdir report & mv index.html logs
 
       - name: Step 3- Upload Artifacts
         uses: actions/checkout@v3
         with:
           name: Relaório Performance tests
-          path: Projetct_K6/logs/index.html
+          path: Projetct_K6/report/index.html
           #if-no-files-found: error # 'warn' or 'ignore' are also available, defaults to `warn`
 
       - name: Step 4 - Publicando Atifacts
@@ -30,4 +30,4 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_branch: gh-pages
-          publish_dir: Projetct_K6/logs/index.html
+          publish_dir: Projetct_K6/report/index.html
