@@ -22,7 +22,7 @@ jobs:
         uses: actions/checkout@v3
         with:
           name: Relaório Performance tests
-          path: Projetct_K6/logs/report_k6.html
+          path: Projetct_K6/logs/index.html
           #if-no-files-found: error # 'warn' or 'ignore' are also available, defaults to `warn`
 
       - name: Step 4 - Publicando Atifacts
@@ -30,4 +30,4 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_branch: gh-pages
-          publish_dir: Projetct_K6/logs/report_k6.html
+          publish_dir: Projetct_K6/logs/index.html
