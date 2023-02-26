@@ -19,9 +19,8 @@ jobs:
       - run: ls & mkdir report & mv index.html report
 
       - name: Step 3- Upload Artifacts
-        uses: actions/checkout@v3
+        uses: actions/upload-artifact@v3
         with:
-          name: Relaório Performance tests
           path: report
           #if-no-files-found: error # 'warn' or 'ignore' are also available, defaults to `warn`
 
