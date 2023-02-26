@@ -1,0 +1,32 @@
+name: Pipeline Tests K6 
+on: [push]
+permissions:
+  contents: write
+jobs:
+  build: 
+    name: K6 Performance
+    runs-on: ubuntu-latest
+    steps: 
+      - name: Step 1 - Checkout repositore
+        uses: actions/checkout@v3
+
+      - name: Step 2 - Running test K6
+        uses: grafana/k6-action@v0.2.0
+        with:
+          filename: Projetct_K6/MaoNaMassa/exec2_LoadTest_GetUsers.js
+
+      ## é possivel realizar comandos linux nesse step
+      - run: ls
+
+      - name: Step 3- Upload Artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          path: Projetct/logs/index.html
+          #if-no-files-found: error # 'warn' or 'ignore' are also available, defaults to `warn`
+
+      - name: Step 4 - Publicando Atifacts
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: gh-pages
+          publish_dir: Projetct/logs/
