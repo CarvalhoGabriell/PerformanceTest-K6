@@ -6,15 +6,24 @@ import papaparse from 'https://jslib.k6.io/papaparse/5.1.1/index.js'
 export const options = {
     stages :[
         {duration: '5s', target: 5},
+        {duration: '5s', target: 0},
+        {duration: '2s', target: 50},
+        {duration: '2s', target: 50},
         {duration: '5s', target: 0}
-        // {duration: '2s', target: 50},
-        // {duration: '2s', target: 50},
-        // {duration: '5s', target: 0}
     ],
 
     thresholds: {
         http_req_failed: ['rate < 0.01']
     },
+
+    ext: {
+        loadimpact: {
+          // projectID referente ao projeto criado dentro do k6 cloud
+          projectID: 3628577,
+          // Test runs with the same name groups test runs together
+          name: "Test K6 Cloud execution"
+        }
+      }
 }
 
 const fileCSV = new SharedArray('Ler dados CSV', function(){
@@ -36,7 +45,7 @@ export default function() {
         }
         
     );
-    console.log("Token JWT logado do user: "+resp.body)
+    //console.log("Token JWT logado do user: "+resp.body)
     check(resp, {
         'Login sucess 200': (s) => s.status === 200,
         'Generate JWT Token': (t) => t.json('acess') !== ''
