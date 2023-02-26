@@ -46,6 +46,6 @@ export default function(token) {
 // no metodo de retorno informar o caminho que o report deve ser armazenado e o nome do arquivo terminado em .html
 export function handleSummary(data) {
     return {
-      "../logs/LoadTest_LoginAuth.html": htmlReport(data),
+      "../logs/report_k6.html": htmlReport(data),
     };
   }
