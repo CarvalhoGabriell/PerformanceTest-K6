@@ -1,0 +1,14 @@
+name: K6 Performance
+on: [push]
+jobs:
+  build: 
+    name: K6 Performance
+    runs-on: ubuntu-latest
+    steps: 
+      - name: step 1 - Checkout repositorie
+        uses: actions/checkout@v3
+
+      - name: step 2 - Running test K6
+        uses: grafana/k6-action@v0.2.0
+        with:
+          filename: ../Project_K6/MaoNaMassa/exec1_smokeTest.js
