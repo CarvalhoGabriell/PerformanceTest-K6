@@ -16,7 +16,6 @@ jobs:
           filename: Projetct_K6/MaoNaMassa/exec1_smokeTest.js
 
       ## é possivel realizar comandos linux nesse step
-      - run: ls & rm index.html
       - run: ls & mkdir report & mv index.html report
 
       - name: Step 3- Upload Artifacts
