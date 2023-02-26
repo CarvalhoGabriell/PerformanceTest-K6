@@ -37,3 +37,10 @@ export default function() {
     });
     sleep(1)
 }
+
+// no metodo de retorno informar o caminho que o report deve ser armazenado e o nome do arquivo terminado em .html
+export function handleSummary(data) {
+    return {
+      "../logs/index.html": htmlReport(data),
+    };
+  }
