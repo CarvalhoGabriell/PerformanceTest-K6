@@ -21,7 +21,7 @@ jobs:
       - name: Step 3- Upload Artifacts
         uses: actions/checkout@v3
         with:
-          repository: Relaório Performance tests
+          name: Relaório Performance tests
           path: Projetct_K6/logs/index.html
           #if-no-files-found: error # 'warn' or 'ignore' are also available, defaults to `warn`
 
