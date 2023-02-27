@@ -1,0 +1,53 @@
+{
+    "crocodiles": [
+        {
+            "id": 1,
+            "name": "Crocs",
+            "sex": "F",
+            "date_of_birth": "2012-09-12",
+            "age": 23
+        },
+        {
+            "id": 2,
+            "name": "Crocs",
+            "sex": "F",
+            "date_of_birth": "2014-07-14",
+            "age": 23
+        },
+        {
+            "id": 3,
+            "name": "Crocs",
+            "sex": "M",
+            "date_of_birth": "2002-11-30",
+            "age": 23
+        },
+        {
+            "id": 4,
+            "name": "Crocs",
+            "sex": "F",
+            "date_of_birth": "2020-03-25",
+            "age": 23
+        },
+        {
+            "id": 5,
+            "name": "Crocs",
+            "sex": "F",
+            "date_of_birth": "2012-12-12",
+            "age": 23
+        },
+        {
+            "id": 6,
+            "name": "Crocs",
+            "sex": "F",
+            "date_of_birth": "2016-01-23",
+            "age": 23
+        },
+        {
+            "id": 7,
+            "name": "Crocs",
+            "sex": "M",
+            "date_of_birth": "2012-04-12",
+            "age": 23
+        }
+    ]
+}

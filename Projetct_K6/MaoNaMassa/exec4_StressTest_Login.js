@@ -62,6 +62,6 @@ export default function() {
 // no metodo de retorno informar o caminho que o report deve ser armazenado e o nome do arquivo terminado em .html
 export function handleSummary(data) {
     return {
-      "../logs/index.html": htmlReport(data),
+      "index.html": htmlReport(data),
     };
   }
